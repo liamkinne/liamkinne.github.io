@@ -1,0 +1,11 @@
+title: Liam Kinne
+url: "https://liam.kinne.io"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+
+# Keep generated files out of the published site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

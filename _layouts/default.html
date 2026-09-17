@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% if page.title and page.title != site.title %}{{ page.title }} |
+            {% endif %}{{ site.title }}
+        </title>
+        <meta name="color-scheme" content="dark light" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/style.css' | relative_url }}"
+        />
+    </head>
+    <body>
+        <header>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            {% if page.date %}
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}"
+                >{{ page.date | date: '%Y-%m-%d' }}</time
+            >
+            {% endif %}
+        </header>
+        <main>{{ content }}</main>
+        <footer>
+            <p>&copy; {{ 'now' | date: '%Y' }} Liam Kinne</p>
+        </footer>
+    </body>
+</html>
